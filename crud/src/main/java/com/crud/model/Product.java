@@ -1,0 +1,43 @@
+﻿package com.crud.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity(name = "product")
+@Table(name = "product")
+public class Product {
+    private Integer id;
+    private String name;
+    private Long price;
+
+
+    public Product(Integer id, String name, Long price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
