@@ -1,11 +1,12 @@
-﻿package com.crud.model;
+package com.crud.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity(name = "product")
 @Table(name = "product")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private Long price;
@@ -15,6 +16,10 @@ public class Product {
         this.id = id;
         this.name = name;
         this.price = price;
+    }
+
+    public Product() {
+
     }
 
     public Integer getId() {
